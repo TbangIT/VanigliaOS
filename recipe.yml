@@ -29,12 +29,11 @@ stages:
       packages:
       - vim
 
-  - name: example-commands # Sample module demonstrating the Shell module with custom commands
+  - name: waydroid-commands # Sample module demonstrating the Shell module with custom commands
     type: shell
     commands:
-    - echo Example output
     - apt install curl ca-certificates -y
-    - curl -s https://repo.waydro.id | sudo bash -e bookworm
+    - curl -s https://repo.waydro.id | bash -e bookworm
     - apt install waydroid -y
 
   - name: example-modules # Sample module demonstrating importing local and remote modules
