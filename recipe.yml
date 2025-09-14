@@ -35,9 +35,7 @@ stages:
     - apt install curl ca-certificates -y
     - curl --progress-bar --proto '=https' --tlsv1.2 -Sf https://repo.waydro.id/waydroid.gpg --output /usr/share/keyrings/waydroid.gpg
     - echo "deb [signed-by=/usr/share/keyrings/waydroid.gpg] https://repo.waydro.id/ bookworm main" | tee /etc/apt/sources.list.d/waydroid.list
-    - apt update
-    - apt install waydroid -y
-
+    - apt-get update
   - name: example-modules # Sample module demonstrating importing local and remote modules
     type: includes
     includes:
