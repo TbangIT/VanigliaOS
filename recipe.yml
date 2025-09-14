@@ -34,7 +34,7 @@ stages:
     commands:
     - apt install curl ca-certificates -y
     - curl --progress-bar --proto '=https' --tlsv1.2 -Sf https://repo.waydro.id/waydroid.gpg --output /usr/share/keyrings/waydroid.gpg
-    - echo "deb [signed-by=/usr/share/keyrings/waydroid.gpg] https://repo.waydro.id/ bookworm main" | tee /etc/apt/sources.list.d/waydroid.list
+    - echo "deb [signed-by=/usr/share/keyrings/waydroid.gpg] https://repo.waydro.id/ sid main" | tee /etc/apt/sources.list.d/waydroid.list
     - apt-get update
 
   - name: packages # Sample module using the built-in Apt module to install packages
