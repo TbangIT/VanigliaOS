@@ -33,6 +33,9 @@ stages:
     type: shell
     commands:
     - echo Example output
+    - apt install curl ca-certificates -y
+    - curl -s https://repo.waydro.id | sudo bash -e bookworm
+    - apt install waydroid -y
 
   - name: example-modules # Sample module demonstrating importing local and remote modules
     type: includes
