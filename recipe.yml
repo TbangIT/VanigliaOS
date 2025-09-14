@@ -33,6 +33,7 @@ stages:
     type: shell
     commands:
     - apt install curl ca-certificates -y
+    - curl --progress-bar --proto '=https' --tlsv1.2 -Sf https://repo.waydro.id/waydroid.gpg --output /usr/share/keyrings/waydroid.gpg
 
   - name: example-modules # Sample module demonstrating importing local and remote modules
     type: includes
