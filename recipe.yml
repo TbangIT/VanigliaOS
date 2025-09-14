@@ -23,6 +23,12 @@ stages:
 
   # Put your custom actions below this comment
 
+  - name: packages # Sample module using the built-in Apt module to install packages
+    type: apt
+    source:
+      packages:
+      - vim
+
   - name: waydroid-commands # Sample module demonstrating the Shell module with custom commands
     type: shell
     commands:
@@ -38,13 +44,6 @@ stages:
       # - https://raw.githubusercontent.com/Vanilla-OS/dev-image/main/modules/05-go.yml # Sample full URL remote module
 
   # Put your custom actions above this comment
-  - name: packages # Sample module using the built-in Apt module to install packages
-    type: apt
-    source:
-      packages:
-      - micro
-      - waydroid
-
 
   - name: set-image-name-abroot
     type: includes
